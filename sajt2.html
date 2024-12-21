@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafić Paradigma</title>
+    <style>
+        /* Globalne stilizacije */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #888;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        button {
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Hero sekcija */
+        .hero {
+            height: 100vh;
+            background: url('https://img.restaurantguru.com/rests/original/104_511257438.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 80px; /* Dodan prostor za logo malih razmjera */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Sekcija "O nama" */
+        .about {
+            display: flex;
+            align-items: center;
+            padding: 100px 50px;
+            background-color: #111;
+        }
+
+        .about-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about img {
+            width: 50%;
+            border: 3px solid #fff;
+        }
+
+        /* Meni sekcija */
+        .menu {
+            text-align: center;
+            padding: 100px 50px;
+            background-color: #000;
+        }
+
+        .menu h2 {
+            margin-bottom: 50px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: #111;
+            padding: 20px;
+            border: 1px solid #222;
+            transition: transform 0.3s;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu-item h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Galerija */
+        .gallery {
+            text-align: center;
+            padding: 100px 50px;
+            background-color: #111;
+        }
+
+        .gallery h2 {
+            margin-bottom: 30px;
+        }
+
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Kontakt sekcija */
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #111;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+        .phone-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #000;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Paradigma</div>
+        <nav>
+            <a href="#home">Početna</a>
+            <a href="#about">O Nama</a>
+            <a href="#menu">Meni</a>
+            <a href="#gallery">Galerija</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Hero sekcija -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Dobrodošli u Paradigmu</h1>
+            <p>Gde se klasika sreće sa budućnošću</p>
+            
+        </div>
+    </section>
+
+    <!-- Sekcija O nama -->
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>O Nama</h2>
+            <p>Kafić Paradigma nudi jedinstvenu atmosferu koja spaja eleganciju, futuristički dizajn i vrhunski ugođaj. Uživajte u najboljim napicima i jelima uz modernu muziku i ambijent.</p>
+        </div>
+        <img src="https://img.restaurantguru.com/rests/original/104_511257438.jpg" alt="Kafić Paradigma">
+    </section>
+
+    <!-- Meni sekcija -->
+    <section id="menu" class="menu">
+        <h2>Naš Meni</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://cdn.create.vista.com/api/media/small/218663614/stock-photo-close-view-coffee-machine-two-mugs-espresso" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Intenzivan ukus za pravi užitak.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Latte">
+                <h3>Latte</h3>
+                <p>Toplo mleko uz aromatičnu kafu.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFjY2hpYXRvfGVufDB8fDB8fHwws" alt="Macchiato">
+                <h3>Mojito</h3>
+                <p>Savršena harmonija kafe i mleka u svakom gutljaju.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerija -->
+    <section id="gallery" class="gallery">
+        <h2>Galerija</h2>
+        <div class="gallery-images">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOjszFIeCWzwP6vcNq59U8h6BbNxiNuipKcbeNy=s680-w680-h510" alt="Slika 1">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNkS8EpNmVQBXbW1RL5F3soV22tFlQ0nxdfm_00=s680-w680-h510" alt="Slika 2">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPUQ0RHrawFxRpke2O21f0q6YolVMHSwVt4x7GZ=s680-w680-h510" alt="Slika 3">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPtaW6RefJ11TXge1Zan3P70n4LtVGS_fzWUoL3=s680-w680-h510" alt="Slika 4">
+        </div>
+    </section>
+
+    <!-- Kontakt sekcija -->
+    <section id="contact" class="contact">
+        <h2>Kontakt</h2>
+        <p>Za više informacija, pozovite nas na:</p>
+        <p class="phone-number">063 425 561</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Pratite nas na društvenim mrežama:</p>
+        <a href="https://www.facebook.com/p/Paradigma-Cuisine-and-Cafe-bar-100078007715211/ " target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com/paradigma_3" target="_blank">Instagram</a>
+        <p>&copy; Paradigma Cuisine and Cafe Bar. Sva prava zadržana.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll za kontakt sekciju
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
